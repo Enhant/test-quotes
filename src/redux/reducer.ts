@@ -27,11 +27,7 @@ const reducer = createReducer(initialState, (builder) => {
       ...state,
       error: false,
       data: Object.entries(action.payload).map( (entry) => ({
-        name: entry[0],
-        id: entry[1].id,
-        last: entry[1].last,
-        highestBid: entry[1].highestBid,
-        percentChange: entry[1].percentChange
+        name: entry[0], id: entry[1].id, last: entry[1].last, highestBid: entry[1].highestBid, percentChange: entry[1].percentChange
       }))
     }
   }) 

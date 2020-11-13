@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, useMemo } from 'react';
 import AnimatedNumber from "animated-number-react";
 
 interface IProps {
@@ -9,17 +9,15 @@ interface IProps {
 const Column = (props : IProps) => {
     const { children, style } = props
     const formatValue = (value : number) => value.toFixed(8);
-    if (isNaN(Number(children))) {
-        return (
+
+
+    const column = useMemo( () => isNaN(Number(children)) ? (
             <div
                 style={style}
             >
                 {children}
             </div>
-        )
-    }
-
-    return (
+    ) : (
         <div
             style={style}
         >
@@ -29,7 +27,8 @@ const Column = (props : IProps) => {
                 delay={2500}
             />
         </div>
-    );
+    ), [children])
+    return column
 }
 
 export default Column
