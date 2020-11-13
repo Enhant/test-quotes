@@ -16,10 +16,9 @@ export const columnWidth = 200;
 
 const Table: React.FC<IProps> = (props) => {
     const { data, columns, error } = props;
-    if (error) {
-        return <Error />;
-    }
     return (
+        <>
+        {error && <Error />}
         <Grid
             columns={columns.map((column) => {
                 return column.width === undefined ? 'min-content' : column.width;
@@ -58,6 +57,7 @@ const Table: React.FC<IProps> = (props) => {
                 </div>
             ))}
         </Grid>
+        </>
     );
 };
 

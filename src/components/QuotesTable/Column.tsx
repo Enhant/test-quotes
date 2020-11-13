@@ -19,7 +19,7 @@ const Column = (props: IProps) => {
                     <AnimatedNumber value={children} formatValue={formatValue} delay={2500} />
                 </div>
             ),
-        [children],
+        [children, style],
     );
     return column;
 };
