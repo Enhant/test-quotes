@@ -32,7 +32,7 @@ const App = () => (
     <Container>
         <Switch>
             <Route path="/" exact component={AboutApp} />
-            <Route path="/test" component={Quotes} />
+            <Route path="/quotes" component={Quotes} />
         </Switch>
     </Container>
 );

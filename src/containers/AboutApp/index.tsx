@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
 const AboutApp: React.FC = () => {
     const classes = useStyles();
     return (
-        <Button to="/test" className={classes.button}>
+        <Button to="/quotes" className={classes.button}>
             Перейти к котировкам
         </Button>
     );
