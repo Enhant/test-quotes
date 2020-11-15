@@ -7,6 +7,7 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
     "extends": ["react-app", "prettier"],
+    "plugins": ['prettier', 'redux-saga', 'react', 'react-hooks', 'jsx-a11y'],
     "rules": {
         'prettier/prettier': ['error', prettierOptions],
         'arrow-body-style': [2, 'as-needed'],
@@ -63,6 +64,5 @@ module.exports = {
         'require-yield': 0,
         "react/boolean-prop-naming": ["error", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+" }],
         "react/jsx-handler-names": ["error"],
-    },
-    "plugins": ["prettier"]
+    }
 }
