@@ -7,7 +7,7 @@ const prettierOptions = JSON.parse(
 
 module.exports = {
     "extends": ["react-app", "prettier"],
-    "plugins": ['prettier', 'redux-saga', 'react', 'react-hooks', 'jsx-a11y'],
+    "plugins": ['prettier', 'react', 'react-hooks', 'jsx-a11y'],
     "rules": {
         'prettier/prettier': ['error', prettierOptions],
         'arrow-body-style': [2, 'as-needed'],

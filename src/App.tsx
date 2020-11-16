@@ -4,6 +4,7 @@ import AboutApp from 'containers/AboutApp';
 import Quotes from 'containers/Quotes';
 import injectSheet from 'react-jss';
 import Container from 'components/Container';
+import NotFoundPage from 'components/NotFoundPage';
 
 const style = {
   '@global': {
@@ -33,6 +34,7 @@ const App = () => (
     <Switch>
       <Route path="/" exact component={AboutApp} />
       <Route path="/quotes" component={Quotes} />
+      <Route component={NotFoundPage} />
     </Switch>
   </Container>
 );
